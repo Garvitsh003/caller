@@ -1,17 +1,10 @@
-name: build
-on:
-  push:
-    branches:
-      - main
+name: Caller Workflow
 
-permissions:
-  contents: read
-  actions: write  # Allows triggering workflows in other repositories
+on:
+  workflow_dispatch:
 
 jobs:
-  call-dispatch:
-    uses: Garvitsh003/trial/.github/workflows/reusable.yml@garvit_testing
-    with:
-      branch: garvit_testing
+  call-workflow:
+    uses: Garvitsh003/trial/.github/workflows/called.yaml@main
     secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
