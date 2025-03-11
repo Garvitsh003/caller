@@ -6,6 +6,6 @@ on:
 
 jobs:
   call-dispatch:
-        uses: Garvitsh003/trial/.github/workflows/reusable.yml@main
+        uses: Garvitsh003/trial/.github/workflows/reusable.yml@garvit_testing
         with:
           branch: garvit_testing
