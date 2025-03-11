@@ -1,0 +1,10 @@
+name: Caller Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: user-org/repo-name/.github/workflows/called.yaml@main
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
