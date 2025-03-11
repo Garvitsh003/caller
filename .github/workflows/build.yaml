@@ -4,10 +4,14 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  actions: write  # Allows triggering workflows in other repositories
+
 jobs:
   call-dispatch:
     uses: Garvitsh003/trial/.github/workflows/reusable.yml@garvit_testing
     with:
       branch: garvit_testing
     secrets:
-      GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
