@@ -1,0 +1,11 @@
+name: build
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-dispatch:
+        uses: Garvitsh003/trial/.github/workflows/reusable.yml@main
+        with:
+          branch: garvit_testing
